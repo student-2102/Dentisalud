@@ -1,15 +1,15 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "python3 -m venv venv && . venv/bin/activate && pip install -r requirements.txt && python manage.py collectstatic --noinput --clear",
-  "outputDirectory": "staticfiles_build",
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/static/(.*)",
-      "destination": "/static/$1"
-    },
+      "src": "silvadent/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/api/index"
+      "src": "/(.*)",
+      "dest": "silvadent/wsgi.py"
     }
   ]
 }
