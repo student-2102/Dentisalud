@@ -368,10 +368,10 @@ function initActiveNavTracking() {
 }
 
 // ============ WHATSAPP ============
-function openWhatsApp() {
-    const message = encodeURIComponent('Hola👋, me gustaría agendar una cita en SILVADENT CENTER. Espero su confirmacion.');
-    window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + message, '_blank');
-}
+// function openWhatsApp() {
+//    const message = encodeURIComponent('Hola👋, me gustaría agendar una cita en SILVADENT CENTER. Espero su confirmacion.');
+//    window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + message, '_blank');
+//}
 
 // ============ FORM SUBMISSION ============
 function handleFormSubmit(event) {
@@ -391,7 +391,7 @@ function handleFormSubmit(event) {
     );
 
     // Open WhatsApp
-    window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + message, '_blank');
+    //window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + message, '_blank');
 
     // Show success message
     const successEl = document.getElementById('formSuccess');
